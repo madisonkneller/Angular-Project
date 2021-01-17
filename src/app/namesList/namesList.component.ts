@@ -6,21 +6,37 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './namesList.component.html',
 })
 export class namesListComponent {
-  testNames: any = {};
+  testNames: any = [];
   constructor(private http: HttpClient) {}
   ngOnInit(): void {
     this.http
       .get(
         'https://cors-anywhere.herokuapp.com/https://neolth-public.s3.amazonaws.com/1005_names.txt',
         {
-          responseType: 'text' as 'json',
+          responseType: 'text' as 'text',
         }
       )
       .subscribe((names) => {
-        console.log(names);
-        let nameString = Object.values(names);
-        console.log(nameString);
-        this.testNames = names;
+        names = names.replace(/(\r\n|\n|\r)/gm, '');
+        let finalArray = [];
+        let pointer = 0;
+        let namesArray = names.split('');
+        for (let i = pointer; i < namesArray.length; i++) {
+          if (/^[A-Z]/.test(namesArray[i])) {
+            let currentName = '';
+            currentName += namesArray[i];
+            for (let j = i + 1; j < namesArray.length; j++) {
+              if (/^[A-Z]/.test(namesArray[j])) {
+                pointer = j;
+                break;
+              } else {
+                currentName += namesArray[j];
+              }
+            }
+            finalArray.push(currentName);
+          }
+        }
+        this.testNames = finalArray;
       });
   }
 }
