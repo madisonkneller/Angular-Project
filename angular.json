@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "Neolth-Task2"
+  "defaultProject": "Neolth-Task2",
+  "cli": {
+    "analytics": "ed5050e4-8fb1-4b1d-b292-da8ddfd86615"
+  }
 }
