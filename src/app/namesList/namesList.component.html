@@ -1,13 +1,9 @@
 <div>
-<div>List of Names</div>
+<h2>List of Names</h2>
 <label for='search-text'>Search:</label>
 <input type="search" [(ngModel)]="searchText" placeholder="Enter text to search" autofocus>
 
-<div>
-  <ul>
-    <li *ngFor="let name of testNames | filter:searchText">
-      {{name}}
-    </li>
-  </ul>
+<div  *ngFor="let name of testNames | filter: searchText">
+  {{name}}
  </div>
 </div>

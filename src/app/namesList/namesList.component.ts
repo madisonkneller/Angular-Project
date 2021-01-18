@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class namesListComponent {
   testNames: any = [];
+  searchText = '';
   constructor(private http: HttpClient) {}
   ngOnInit(): void {
     this.http
