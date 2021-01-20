@@ -1,7 +1,7 @@
 .names {
   border: 1px solid transparent;
   border-color: white;
-  background-color: rgb(248, 245, 245);
+  background-color: #ebebeb;
   color: black;
   font-size: 16px;
 }
@@ -11,9 +11,9 @@
 }
 
 .search-box {
-  border: 12px solid transparent;
+  border: 3px solid transparent;
   border-color: white;
-  background-color: lightgray;
+  background-color: rgb(211, 211, 211);
   color: black;
   font-size: 16px;
   margin-right: 20%;
