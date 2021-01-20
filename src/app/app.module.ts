@@ -7,7 +7,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginModule } from './login/login.module';
 import { namesListModule } from './namesList/namesList.module';
-import { FilterPipe } from './pipes/filter.pipe';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -16,7 +15,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 // import { DataService } from './data.service';
 
 @NgModule({
-  declarations: [AppComponent, FilterPipe],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     // InMemoryWebApiModule.forRoot(DataService),

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-// import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 import {
   EmailValidator,
@@ -18,6 +17,7 @@ import { AuthService } from '../auth.service';
 export class LoginComponent implements OnInit {
   loginForm: FormGroup | any;
   isSubmitted = false;
+  errorMessage = false;
 
   constructor(
     private authService: AuthService,
@@ -48,32 +48,8 @@ export class LoginComponent implements OnInit {
       this.loginForm.value.password === '123456'
     ) {
       this.router.navigateByUrl('/names');
+    } else {
+      this.errorMessage = true;
     }
   }
 }
-
-// @Component({
-//   selector: 'app-login',
-//   templateUrl: './login.component.html',
-//   // styleUrls: ['./login.component.css'],
-// })
-// // implements OnInit
-// export class LoginComponent implements OnInit {
-//   loginForm: any{} = FormGroup;
-//   constructor() {
-
-//   }
-
-//   ngOnInit(private FormGroup: FormGroup) {
-//     this.loginForm = new FormGroup({
-//       email: new FormControl('', [Validators.required, Validators.email]),
-//       password: new FormControl('', [
-//         Validators.required,
-//         Validators.minLength(6),
-//       ]),
-//     });
-//   }
-//   onLogin() {
-//     console.log('onLogin');
-//   }
-// }
