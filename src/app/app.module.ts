@@ -11,6 +11,9 @@ import { namesListModule } from './namesList/namesList.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
+// import { AuthGuardService } from './service/auth-guard.service';
+import { LoginComponent } from './login/login.component';
+
 // import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 // import { DataService } from './data.service';
 
@@ -28,7 +31,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     AngularMaterialModule,
     FlexLayoutModule,
   ],
-  providers: [],
+  providers: [LoginComponent],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

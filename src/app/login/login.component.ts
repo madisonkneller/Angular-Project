@@ -7,17 +7,19 @@ import {
   Validators,
 } from '@angular/forms';
 import { Router } from '@angular/router';
-import { User } from '../user';
+import { Observable } from 'rxjs';
 import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
   loginForm: FormGroup | any;
   isSubmitted = false;
   errorMessage = false;
+  isLoggedIn = true;
 
   constructor(
     private authService: AuthService,
@@ -47,6 +49,7 @@ export class LoginComponent implements OnInit {
       this.loginForm.value.email === 'mk@email.com' &&
       this.loginForm.value.password === '123456'
     ) {
+      this.isLoggedIn = true;
       this.router.navigateByUrl('/names');
     } else {
       this.errorMessage = true;

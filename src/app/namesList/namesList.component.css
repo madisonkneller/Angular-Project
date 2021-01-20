@@ -1,0 +1,25 @@
+.names {
+  border: 1px solid transparent;
+  border-color: white;
+  background-color: rgb(248, 245, 245);
+  color: black;
+  font-size: 16px;
+}
+
+.names-list {
+  align-content: center;
+}
+
+.search-box {
+  border: 12px solid transparent;
+  border-color: white;
+  background-color: lightgray;
+  color: black;
+  font-size: 16px;
+  margin-right: 20%;
+  margin-left: 20%;
+}
+
+.search-text {
+  font-size: 16px;
+}

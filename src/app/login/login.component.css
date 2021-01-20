@@ -4,6 +4,7 @@
   width: 400px;
   margin: 16px auto;
   font-size: 16px;
+  text-align: center;
 }
 
 .login-header,
@@ -21,7 +22,7 @@
 }
 
 .login-header {
-  background: rgb(12, 77, 129);
+  background: #123c5e;
   padding: 20px;
   font-size: 1.4em;
   font-weight: normal;
@@ -65,18 +66,18 @@
 }
 
 .login input[type="submit"] {
-  background: rgb(1, 29, 51);
+  background: #123c5e;
   border-color: transparent;
   color: #fff;
   cursor: pointer;
 }
 
 .login input[type="submit"]:hover {
-  background: #17c;
+  background: #0d5b9c;
 }
 
 .login input[type="submit"]:focus {
-  border-color: #05a;
+  border-color: #0d5b9c;
 }
 
 .has-error input[type="email"],

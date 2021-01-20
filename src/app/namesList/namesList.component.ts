@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-namesList',
   templateUrl: './namesList.component.html',
+  styleUrls: ['./namesList.component.css'],
 })
 export class namesListComponent {
   testNames: any = [];

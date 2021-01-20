@@ -5,7 +5,7 @@
   <h2 class="login-header">Login</h2>
   <form [formGroup]="loginForm" class="login-container" (ngSubmit)="login()">
 
-    <p [ngClass]="{ 'has-error': isSubmitted && formControls.email.errors }">
+    <p [ngClass]="{ 'has-error': isSubmitted && formControls.email.errors || errorMessage }">
       <input type="email" placeholder="Email" formControlName="email">
     </p>
 
@@ -13,7 +13,7 @@
       <div *ngIf="formControls.email.errors.required">Email is required</div>
     </div>
 
-    <p [ngClass]="{ 'has-error': isSubmitted && formControls.password.errors }">
+    <p [ngClass]="{ 'has-error': isSubmitted && formControls.password.errors || errorMessage }">
       <input type="password" placeholder="Password" formControlName="password">
     </p>
 
