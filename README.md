@@ -8,7 +8,7 @@ Through this project, I familiarized myself with Angular 11 and TypeScript.
 
 - Login Page with Error Messages
 - Data Fetching and Rendering
-- Search and Filter capability
+- Search and Filter Capability
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.7.
 
