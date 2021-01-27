@@ -1,6 +1,6 @@
 # Angular Project
 
-# Takeaways
+# Overview
 
 Through this project, I familiarized myself with Angular 11 and TypeScript. 
 
