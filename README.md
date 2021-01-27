@@ -1,10 +1,10 @@
 # Angular Project
 
-# Overview
+## Overview
 
 Through this project, I familiarized myself with Angular 11 and TypeScript. 
 
-# Features
+## Features
 
 - Login Page with Error Messages
 - Data Fetching and Rendering
